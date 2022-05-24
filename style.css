@@ -118,6 +118,8 @@ body {
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     row-gap: 40px;
+    -webkit-column-gap: 0;
+            column-gap: 0;
   }
 }
 

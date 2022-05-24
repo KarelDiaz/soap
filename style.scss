@@ -82,6 +82,7 @@ body {
       @media only screen and (max-width: 992px) {
         grid-template-columns: 1fr;
         row-gap: 40px;
+        column-gap: 0;
       }
 
       display: grid;
