@@ -1,0 +1,120 @@
+$shadow10 : 0 0 10px rgba(#001254, .15);
+$shadow20 : 0 0 20px rgba(#001254, .3);
+$shadow30 : 0 0 30px rgba(#001254, .3);
+
+html,
+body {
+  margin: 0;
+  padding: 100px 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Times New Roman', Times, serif
+}
+
+
+.header {
+  display: flex;
+  column-gap: 10%;
+  justify-content: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: $shadow30;
+
+  &__img {
+    background-color: white;
+    height: 60px;
+    border-radius: 100%;
+    transition: .3s;
+    cursor: pointer;
+    border: 3px solid transparent;
+    box-shadow: $shadow10;
+
+    &:hover {
+      transform: scale(1.2);
+      box-shadow: $shadow20;
+    }
+  }
+}
+
+.main {
+  @media only screen and (max-width: 992px) {
+    row-gap: 100px;
+  }
+
+  display: flex;
+  flex-direction: column;
+  row-gap: 200px;
+  align-items: center;
+  padding: 20px;
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px dashed rgba(black, .5);
+    padding-bottom: 50px;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+
+    &--title {
+      @media only screen and (max-width: 992px) {
+        font-size: 30px;
+      }
+
+      text-transform: uppercase;
+      font-size: 40px;
+      font-weight: 700;
+      letter-spacing: 1.25px;
+      padding: 10px 20px;
+      text-align: center;
+      font-weight: 100;
+    }
+
+    &--content {
+      @media only screen and (max-width: 992px) {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+      }
+
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 40px;
+      max-width: 1000px;
+
+      &--img {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        img {
+          width: 100%;
+        }
+      }
+
+      &--text {
+        @media only screen and (max-width: 992px) {
+          padding: 0;
+          font-size: 16px;
+          text-align: justify;
+          font-weight: 300;
+        }
+
+        text-align: justify;
+        grid-column: span 2;
+        font-size: 20px;
+        letter-spacing: 2.25px;
+        color: rgba(black, .8);
+        font-weight: 100;
+        padding-top: 50px;
+      }
+    }
+  }
+}
